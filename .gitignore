@@ -1,0 +1,5 @@
+*.o
+*.so
+*.a
+bin/
+collection_demo
