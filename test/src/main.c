@@ -7,17 +7,16 @@ int main(void)
 {
     int i = 0;
     int b = 1;
-    pt_list list;
+    pt_list list = c_list_initialize();
 
-    list = NULL;
-    c_list_push_front(&list, &i);
-    c_list_push_front(&list, &b);
-    c_list_push_front(&list, &b);
-    c_list_push_back(&list, &b);
-    c_list_push_back(&list, &i);
-    c_list_pop_front(&list);
-    c_list_pop_back(&list);
-    printf("SIZE:%lu\n", c_list_size(list));
+    list->c_list_push_front(&list, &i);
+    list->c_list_push_front(&list, &b);
+    list->c_list_push_front(&list, &b);
+    list->c_list_push_back(&list, &b);
+    list->c_list_push_back(&list, &i);
+    list->c_list_pop_front(&list);
+    list->c_list_pop_back(&list);
+    printf("SIZE:%lu\n", list->c_list_size(&list));
 
     c_putstr("THIS IS THE END\n");
     return 0;

@@ -9,7 +9,9 @@ RANLIB = ranlib
 SRCS = src/string/c_putstr.c\
 src/string/c_strlen.c\
 src/list/c_list_control.c\
-src/list/c_list_size.c
+src/list/c_list_size.c\
+src/list/c_list_manage.c\
+src/list/c_list_iter.c
 OBJS = $(SRCS:.c=.o)
 
 all : $(S_NAME)

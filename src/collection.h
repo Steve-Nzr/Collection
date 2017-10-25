@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#define nullptr NULL
+
 #include "../include/c_list.h"
 #include "../include/c_string.h"
 

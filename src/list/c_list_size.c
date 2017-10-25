@@ -1,11 +1,10 @@
 #include "../collection.h"
 
-size_t c_list_size(pt_list list)
+size_t c_list_size(ppt_list head)
 {
-    pt_list current = list;
+    pt_list current = *head;
 
     if (!current)
         return 0;
-    printf("ADDR:%p\n", (void *)current->data);
-    return c_list_size(current->other) + 1;
+    return c_list_size(&current->other) + 1;
 }

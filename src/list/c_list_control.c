@@ -4,7 +4,7 @@ bool c_list_push_front(ppt_list head, void *data)
 {
     pt_list node;
 
-    node = (pt_list)malloc(sizeof(t_list));
+    node = c_list_initialize();
     if (!node)
         return false;
 
@@ -21,7 +21,7 @@ bool c_list_push_back(ppt_list head, void *data)
     while (current->other)
         current = current->other;
 
-    current->other = malloc(sizeof(t_list));
+    current->other = c_list_initialize();
     current->other->data = data;
     current->other->other = NULL;
     return true;
